@@ -15,3 +15,6 @@ print(df.head())
 
 # Crear un gráfico usando NixtlaClient
 nixtla_client.plot(df, time_col='timestamp', target_col='value')
+
+timegpt_fcst_df = nixtla_client.forecast(df=df, h=12, freq='MS', time_col='timestamp', target_col='value')
+timegpt_fcst_df.head()
